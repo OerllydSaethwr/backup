@@ -24,7 +24,7 @@ def index(request):
             try:
                 acc = Account.objects.get(email=email)
                 if acc.password == password:
-                    return redirect('patient')
+                    return redirect('patientpage')
                 else:
                     print("false")
                     return redirect('index')
